@@ -1,8 +1,7 @@
-import { useState } from 'react'
-import './App.css'
 import Header from './components/Header'
 import Main from './components/Main'
 import Footer from './components/Footer'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 function App() {
  
@@ -10,7 +9,12 @@ function App() {
   return (
     <>
       <Header />
-      <Main />
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element = {<Main />}></Route>
+          {/* <Route path='/booking' element></Route> */}
+        </Routes>
+      </BrowserRouter>
       <Footer />
     </>
   )

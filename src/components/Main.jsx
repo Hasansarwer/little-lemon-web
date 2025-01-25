@@ -4,6 +4,7 @@ export default function Main() {
     return(
         <main >
             <div className="main">
+                <div className="bg">
                 <div className="hero">
                     <div className="details">
                         <h1>Little Lemon</h1>
@@ -11,10 +12,13 @@ export default function Main() {
                         <p>We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.</p>
                         <button type="button"> Reserve a Table</button>
                     </div>
+                        <img className='hero-img' src={restaurentFood} alt="" />
+                    </div>   
                 </div>
+                
             </div>
             
-            <img className='hero-img' src={restaurentFood} alt="" />
+            
         </main>
     )
 };
