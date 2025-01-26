@@ -7,7 +7,7 @@ export default function Main() {
     return(
         <main >
             <div className="main">
-                <div className="bg">
+                <section className="bg">
                 <div className="hero">
                     <div className="details">
                         <h1>Little Lemon</h1>
@@ -17,7 +17,7 @@ export default function Main() {
                     </div>
                         <img className='hero-img' src={restaurentFood} alt="" />
                     </div>   
-                </div>
+                </section>
                 <section className="menu">
                     <div className="special">
                         <h2>This weeks specials!</h2>
@@ -32,6 +32,7 @@ export default function Main() {
                                 <p>$12.99</p>
                             </div>
                             <p>The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons. </p>
+                            <h3> Order a delivery <img src='/Delivery van.png' alt='Delivery van' style={{width:'24px', height:'24px'}} /></h3>
                             </div>
                         </div>
                         <div className="card">
@@ -42,6 +43,7 @@ export default function Main() {
                                 <p>$5.99</p>
                             </div>
                             <p>Our Bruschetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil. </p>
+                            <h3> Order a delivery <img src='/Delivery van.png' alt='Delivery van' style={{width:'24px', height:'24px'}} /></h3>
                             </div>
                         </div>
                         <div className="card">
@@ -52,9 +54,14 @@ export default function Main() {
                                 <p>$5.00</p>
                             </div>
                             <p>This comes straight from grandma’s recipe book, every last ingredient has been sourced and is as authentic as can be imagined.</p>
-                            <h3> Order a delivery </h3>
+                            <h3> Order a delivery <img src='/Delivery van.png' alt='Delivery van' style={{width:'24px', height:'24px'}} /></h3>
                             </div>
                         </div>
+                    </div>
+                </section>
+                <section className="feedback">
+                    <div className='row'>
+                        <h2>What our customers say!</h2>
                     </div>
                 </section>
             </div>
