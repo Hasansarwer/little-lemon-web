@@ -299,3 +299,16 @@ header{
   cursor: pointer;
   margin: 30px auto;
 }
+
+.confirmed-booking {
+  padding: 20px;
+  background-color: #EDEFEE;
+  color: #333;
+  border-radius: 12px;
+  margin: 30px auto;
+  max-width: 600px;
+}
+
+.confirmed-booking h2 {
+  color: #495E57;
+}
