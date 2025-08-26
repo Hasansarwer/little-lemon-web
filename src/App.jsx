@@ -1,8 +1,9 @@
 import Header from './components/Header'
 import Main from './components/Main'
 import Footer from './components/Footer'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import Booking from './components/Booking'
+import ConfirmedBooking from './components/ConfirmedBooking'
+import { BrowserRouter, Route, Routes} from 'react-router-dom'
+import Booking from './components/BookingForm'
 import { useState } from 'react'
 
 function App() {
@@ -15,18 +16,7 @@ function App() {
         occasion: ""
     });
     
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        alert(`Thank you, ${bookingData.name}! Your table for ${bookingData.guests} person(s) on ${bookingData.date} at ${bookingData.time} has been reserved. A confirmation email will be sent to ${bookingData.email}.`);
-        setBookingData({
-            name: "",
-            email: "",
-            date: "",
-            time: "",
-            guests: 1,
-            occasion: ""
-        });
-    };
+    
 
   return (
     <>
@@ -34,8 +24,10 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path='/' element = {<Main />}></Route>
-          <Route path='/booking' element = {<Booking bookingData={bookingData} handleSubmit={handleSubmit} setBookingData={setBookingData} />}></Route>
+          <Route path='/booking' element = {<Booking bookingData={bookingData} setBookingData={setBookingData} />}></Route>        
+          <Route path='/confirmed-booking' element={<ConfirmedBooking />} />
         </Routes>
+
       </BrowserRouter>
       <Footer />
     </>
