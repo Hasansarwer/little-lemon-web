@@ -244,3 +244,58 @@ header{
   margin: 0 auto;
   justify-content: center;
 }
+
+.booking-title{
+  font-size: 32px;
+  text-align: center;
+  color: #F4CE14;
+  margin-top: 50px;
+}
+
+.booking{
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  background-color: #495E57;
+  border-radius: 16px;
+  box-shadow: outset 10px 10px 10px #d1d9e6, inset -10px -10px 10px #ffffff;
+}
+
+.booking form{
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  padding: 20px;
+  width: 100%;
+  max-width: 350px;
+}
+
+
+.booking form label{
+  color: #fff;
+  font-weight: 600;
+}
+
+.booking form input, .booking form select{
+  height: 35px;
+  border-radius: 8px;
+  border: none;
+  padding: 5px;
+}
+
+.booking form button{
+  background-color: #F4CE14;
+  color: #333;
+  font-weight: 600;
+  height: 40px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  margin: 30px auto;
+}
