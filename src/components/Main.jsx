@@ -4,6 +4,12 @@ import greekSalad from '/greek salad.jpg'
 import lemon from '/lemon dessert.jpg'
 
 export default function Main() {
+    const gotoMenu = () => {
+        window.location.href = '#menu';
+    }
+    const gotoTable = () => {
+        window.location.href = '/booking';
+    }
     return(
         <main >
             <div className="main">
@@ -13,7 +19,7 @@ export default function Main() {
                             <h1>Little Lemon</h1>
                             <h2>Chicago</h2>
                             <p>We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.</p>
-                            <button type="button"> Reserve a Table</button>
+                            <button type="button" onClick={gotoTable}> Reserve a Table</button>
                         </div>
                             <img className='hero-img' src={restaurentFood} alt="" />
                     </div>   
@@ -21,7 +27,8 @@ export default function Main() {
                 <section id="menu" className="menu">
                     <div className="special">
                         <h2>This weeks specials!</h2>
-                        <button type="button">Menu</button>
+                        <button type="button" onClick={gotoMenu}>Menu</button>
+
                     </div>
                     <div className="cards">
                         <div className="card">
