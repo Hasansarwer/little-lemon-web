@@ -300,6 +300,16 @@ header{
   margin: 30px auto;
 }
 
+.booking form button:hover{
+  background-color: #EE9972;
+  color: #fff;
+}
+
+.booking form button:disabled{
+  background-color: grey;
+  cursor: not-allowed;
+}
+
 .confirmed-booking {
   padding: 20px;
   background-color: #EDEFEE;

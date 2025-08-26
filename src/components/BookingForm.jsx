@@ -17,6 +17,16 @@ export default function BookingForm({ bookingData, setBookingData }) {
 
     
 
+    const isFormValid = () => {
+        return (
+            bookingData.name.trim() !== "" &&
+            bookingData.email.trim() !== "" &&
+            bookingData.date.trim() !== "" &&
+            bookingData.time.trim() !== "" &&
+            bookingData.guests > 0 &&
+            bookingData.occasion.trim() !== ""
+        );
+    };
     const onSubmit = (e) => {
         e.preventDefault(); // Prevent page reload
         if (!submitAPI(bookingData)) {
@@ -91,14 +101,14 @@ export default function BookingForm({ bookingData, setBookingData }) {
             <input type="number" id="guests" name="guests" min="1" value={bookingData.guests} onChange={(e) => setBookingData({ ...bookingData, guests: e.target.value })} required />
 
             <label htmlFor="occasion">Occasion:</label>
-            <select id="occasion" name="occasion" value={bookingData.occasion} onChange={(e) => setBookingData({ ...bookingData, occasion: e.target.value })}>
+            <select id="occasion" name="occasion" value={bookingData.occasion} onChange={(e) => setBookingData({ ...bookingData, occasion: e.target.value })} required>
                 <option value="" >Select Occasion</option>
                 <option value="birthday">Birthday</option>
                 <option value="anniversary">Anniversary</option>
                 <option value="business">Business</option>
             </select>
 
-            <button type="submit">Make Your Reservation</button>
+            <button disabled={!isFormValid()} type="submit">Make Your Reservation</button>
         </form>
     </div>
   )
